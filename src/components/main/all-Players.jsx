@@ -3,7 +3,7 @@ import '../../App.css'
 import '../../../players.json'
 import Player from './Player'
 
-function AllPlayers(){
+function AllPlayers({chosePlayer}){
     const [players, setPlayers] = useState([])
     useEffect(() => {
         fetch("players.json",)
@@ -13,9 +13,7 @@ function AllPlayers(){
     return (
         <div className="grid grid-cols-3 gap-8 justify-between w-11/12 mx-auto py-8">
             {
-                players.map((player) => (
-                    <Player key={player.id} player={player}></Player>
-                ))
+                players.map( player => <Player key={player.id} player={player} choseplayer={chosePlayer}></Player> )
             }
         </div>
     )

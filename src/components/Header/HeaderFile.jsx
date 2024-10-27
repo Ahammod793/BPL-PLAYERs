@@ -35,7 +35,7 @@ function Header(){
                 <h1 className='font-bold text-white'>Assemble Your Ultimate Dream 11 Cricket Team</h1>
                 <h3 className='text-[#FFFFFFB3] pt-2 pb-6'>Beyond Boundaries Beyond Limits</h3>
                 <button className="btn border-2 border-[#E7FE29] rounded-lg p-1" onClick={HundleCoin} >
-                    <span className="bg-[#E7FE29] block rounded-lg p-3 shadow">Claim Free Credit</span>
+                    <span className="bg-[#E7FE29] block rounded-lg claim p-3 shadow">Claim Free Credit</span>
                 </button>
             </div>
         </div>

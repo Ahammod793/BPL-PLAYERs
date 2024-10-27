@@ -6,9 +6,38 @@ body{
   background-repeat: no-repeat;
   background-size: cover;
 }
+li a:hover{
+  text-decoration: underline;
+  text-underline-offset:5px;
+  text-decoration-thickness: 1px !important;
+}li a:active{
+  text-decoration-color: rgba(28, 240, 255, 0.327);
+  background: linear-gradient(to top,rgba(0, 255, 255, 0.588),transparent  );
+  
+}
+.choseBtn:hover{
+  background-color: aliceblue;
+}
+.choseBtn:active{
+  background-color:rgb(217, 228, 237);
+  transform: scaleX(0.98);
+}
+.claim:hover{
+  background-color: #E7F149;
+}
+.claim:active{
+  background-color: #e9fa48;
+  transform: scaleX(1.0009);
+}
 .subscribe{
   border-radius: 12px;
   box-shadow: inset 4px 4px 20px 0px rgba(255, 35, 1, 0.9);
+}.subscribe:hover,.footerSub:hover{
+  box-shadow: inset 4px 4px 20px 0px rgba(208, 37, 11, 0.9);
+}
+.subscribe:active,.footerSub:active{
+  box-shadow: inset 4px 4px 20px 0px rgba(195, 28, 2, 0.9);
+  transform: scaleX(1.0099);
 }
 .footerSub{
   box-shadow: inset 4px 4px 20px 0px rgba(255, 35, 1, 0.9);
@@ -24,4 +53,7 @@ body{
 }
 .footer{
   background-color: #06091A;
+}
+.deleteBTN:active{
+  transform: scale(1.09);
 }

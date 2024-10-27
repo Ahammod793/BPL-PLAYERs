@@ -1,13 +1,13 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import Header from "./components/Header/HeaderFile";
-import AvailablePlayers from './components/Available';
-import allPlayers from './components/main/all-Players';
+import AvailableAndSelect from './components/AvailableAndSelect';
 import AllPlayers from './components/main/all-Players';
 import NewsLatter from './components/NewsLatter/newsLatter';
 import Footer from './components/footer/Footer';
+import AvailSelectPlayers from './components/main/SeletedPlayersCont';
 
 function App() {
   
@@ -18,8 +18,6 @@ function App() {
     nonSelected.classList.remove('active');
     document.querySelector('.selectedTitle').classList.remove('hidden');
     document.querySelector('.availTitle').classList.add('hidden');
-    let selectedPlayers = (document.querySelector(".SelectedPlayers").innerText);
-    console.log("Selected")
   }
   function Available(){
       const NonSelected=document.querySelector('#selected');
@@ -28,16 +26,22 @@ function App() {
       Selected.classList.add('active');
       document.querySelector('.availTitle').classList.remove('hidden');
       document.querySelector('.selectedTitle').classList.add('hidden');
-      console.log("Available")
   }
   window.onload=function(){
     Available()
   }
+  const [selectedPlayers, setSelectedPlayers] = useState([]);
+  const choseHandler = players => {
+    const newPlayer = [...selectedPlayers, players];
+    setSelectedPlayers(newPlayer);
+
+  }
   return (
     <>
       <Header></Header>
-      <AvailablePlayers available={Available} selected={SelectedBTN}></AvailablePlayers>
-      <AllPlayers></AllPlayers>
+      <AvailableAndSelect available={Available} selected={SelectedBTN}></AvailableAndSelect>
+      <AllPlayers chosePlayer={choseHandler}></AllPlayers>
+      <AvailSelectPlayers players={selectedPlayers}></AvailSelectPlayers>
       <NewsLatter></NewsLatter>
       <Footer></Footer>
     </>

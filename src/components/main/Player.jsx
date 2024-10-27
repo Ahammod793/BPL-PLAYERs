@@ -1,6 +1,6 @@
 import '../../App.css'
-function Player({index, player}){
-    
+function Player({index, player,choseplayer}){
+   
     return (
         <div className='p-6 border border-x-orange-100 rounded-2xl'>
             <img src={player.img} alt="" className='w-full h-60 rounded-2xl' />
@@ -25,7 +25,7 @@ function Player({index, player}){
             </div>
             <div className='flex flex-row justify-between pt-3'>
                 <h1 className='font-semibold text-[16px] text-[#131313]'>Price:  {player.price}</h1>
-                <button className='border border-[#1313131A] rounded-lg px-4 py-2 text-[14px] font-normal'>Choose Player</button>
+                <button className='border border-[#1313131A] rounded-lg px-4 py-2 text-[14px] font-normal choseBtn' onClick={()=>choseplayer(player)} >Choose Player</button>
             </div>
         </div>
     )

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import '../App.css'
-function AvailablePlayers({available, selected}){
+function AvailableAndSelect({available, selected}){
     const maxPlayers = 6;
     const [selectedPlayers, setSelectedPlayers] = useState(0);
     // useEffect((
@@ -19,4 +19,4 @@ function AvailablePlayers({available, selected}){
         </div>
     )
 }
-export default AvailablePlayers;
+export default AvailableAndSelect;
