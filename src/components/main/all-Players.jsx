@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import '../../App.css'
-import '../../../players.json'
+import '../../../public/players.json'
 import Player from './Player'
 
 function AllPlayers({chosePlayer,deleteHandler, isActive}){

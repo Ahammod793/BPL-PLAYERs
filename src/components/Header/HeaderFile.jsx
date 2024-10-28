@@ -5,11 +5,12 @@ import bannerIMG from '../../assets/banner-main.png';
 import '../../App.css'
 import { toast } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
+import { useEffect } from'react';
 function Header({coinHandler}){
-    
+
     return (
         <div>
-            <nav className='flex flex-row justify-between w-11/12 mx-auto my-5'>
+            <nav className='sticky top-0  flex flex-row justify-between w-11/12 mx-auto my-5'>
                 <div>
                     <img src={logo} alt="BPL-LOGO" className='w-16 h-16'/>
                 </div>

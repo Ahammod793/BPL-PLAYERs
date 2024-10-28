@@ -10,6 +10,7 @@ import AvailSelectPlayers from './components/main/SeletedPlayersCont';
 import { toast } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
 import { split } from 'postcss/lib/list';
+fetch('/players.json')
 
 
 // the player.json file used in the all-Players.jsx file
