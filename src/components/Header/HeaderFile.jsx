@@ -3,12 +3,10 @@ import logo from '../../assets/logo.png';
 import coinLogo from '../../assets/coin.png';
 import bannerIMG from '../../assets/banner-main.png';
 import '../../App.css'
-function Header(){
-    function HundleCoin(){
-        const AvailableCoin = document.getElementById('coin').innerText;
-        const NewCoin = parseInt(AvailableCoin) + 1000000;
-        document.getElementById('coin').innerText = NewCoin.toString();
-      }
+import { toast } from 'react-toastify';
+import "react-toastify/dist/ReactToastify.css";
+function Header({coinHandler}){
+    
     return (
         <div>
             <nav className='flex flex-row justify-between w-11/12 mx-auto my-5'>
@@ -34,7 +32,7 @@ function Header(){
                 <img src={bannerIMG} alt="" className='items-center justify-center pb-6' />
                 <h1 className='font-bold text-white'>Assemble Your Ultimate Dream 11 Cricket Team</h1>
                 <h3 className='text-[#FFFFFFB3] pt-2 pb-6'>Beyond Boundaries Beyond Limits</h3>
-                <button className="btn border-2 border-[#E7FE29] rounded-lg p-1" onClick={HundleCoin} >
+                <button className="btn border-2 border-[#E7FE29] rounded-lg p-1" onClick={coinHandler} >
                     <span className="bg-[#E7FE29] block rounded-lg claim p-3 shadow">Claim Free Credit</span>
                 </button>
             </div>

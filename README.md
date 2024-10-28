@@ -1,8 +1,16 @@
 # React + Vite
+# BPL-Player
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a demo web of BPL Player information created using React and Vite. Used own json file instead of 
+an API. The main purpose of the web is how to use json file to display any information from a JSON file using React components.
 
-Currently, two official plugins are available:
+# Technologies is used to build this project are:
+###     - React
+###     - Vite
+###     - Tailwind CSS
+###     - React Toastify
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# 3 key features of your project.
+ - 1.  useState
+ - 2.  toast
+ - 3.  useEffect

@@ -1,5 +1,5 @@
 import '../../App.css'
-function Player({index, player,choseplayer}){
+function Player({index,avoid, player,choseplayer}){
    
     return (
         <div className='p-6 border border-x-orange-100 rounded-2xl'>
